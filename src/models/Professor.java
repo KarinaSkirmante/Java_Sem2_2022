@@ -17,6 +17,20 @@ public class Professor {
 		return degree;
 	}
 	
+	//set funkcijas
+	public void setName(String name) {
+		if(name.matches("[A-Z]{1}[a-z]+"))
+		{
+			this.name = name;
+		}
+		else
+		{
+			this.name = "notknown";
+		}
+	}
+	
+	
+	
 	
 	
 	

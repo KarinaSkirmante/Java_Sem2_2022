@@ -70,11 +70,21 @@ public class Course {
 	
 	
 	
-	
-	
-	
-	
 	//3.konstruktori
+	public Course()
+	{
+		setId();
+		setTitle("Testa kurss");
+		setCreditPoints((byte)2);
+		setProfessor(new Professor());
+	}
+	public Course(String title, byte creditPoints, Professor professor)
+	{
+		setId();
+		setTitle(title);
+		setCreditPoints(creditPoints);
+		setProfessor(professor);
+	}
 	
 	//4. toString funkcija
 

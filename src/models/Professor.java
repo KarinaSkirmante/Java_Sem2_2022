@@ -6,7 +6,7 @@ public class Professor {
 	private String surname;
 	private ProfDegree degree;
 	
-	//2. get funkcijas
+	//2.1 get funkcijas
 	public String getName() {
 		return name;
 	}
@@ -17,7 +17,7 @@ public class Professor {
 		return degree;
 	}
 	
-	//set funkcijas
+	//2.2.set funkcijas
 	public void setName(String name) { 
 		if(name!=null && name.matches("[A-ZĀĒŪĪĻĶĢŠŽČŅ]{1}[a-zēūīāšģķļņčž]+")) //\p{L}+
 		{
@@ -50,7 +50,20 @@ public class Professor {
 			this.degree = ProfDegree.master;
 		}
 	}
-	
+	//3.konstruktori
+	public Professor()
+	{
+		setName("Test");
+		setSurname("Professor");
+		setDegree(ProfDegree.doctor);
+	}
+	//Professor prof1 = new Professor("Karina","Skirmante", ProfDegree.master);
+	public Professor(String name, String surname, ProfDegree degree)
+	{
+		setName(name);
+		setSurname(surname);
+		setDegree(degree);
+	}
 	
 	
 	

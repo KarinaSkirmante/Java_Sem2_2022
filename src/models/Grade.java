@@ -64,14 +64,33 @@ public class Grade {
 		}
 	}
 	
-	
-	
-	
-	
-	
+		
 	//3.konstruktori
+	public Grade()
+	{
+		setId();
+		setGradeValue(0);
+		setStudent(new Student());
+		setCourse(new Course());
+	}
 	
+	public Grade(int gradeValue, Student student, Course course)
+	{
+		setId();
+		setGradeValue(gradeValue);
+		setStudent(student);
+		setCourse(course);
+	}
+
 	//4.toString
+	
+	@Override
+	public String toString() {
+		return "Grade [id=" + id + ", gradeValue=" + gradeValue + ", student=" + student.getSurname() + ", course=" + course.getTitle() + "]";
+	}
+	
+	
+	
 	
 
 }

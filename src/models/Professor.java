@@ -5,6 +5,9 @@ public class Professor {
 	private String name;
 	private String surname;
 	private ProfDegree degree;
+	private int id;
+	
+	private static int idCounter = 0;
 	
 	//2.1 get funkcijas
 	public String getName() {
@@ -15,6 +18,10 @@ public class Professor {
 	}
 	public ProfDegree getDegree() {
 		return degree;
+	}
+		
+	public int getId() {
+		return id;
 	}
 	
 	//2.2.set funkcijas
@@ -50,9 +57,19 @@ public class Professor {
 			this.degree = ProfDegree.master;
 		}
 	}
+	
+	public void setId()
+	{
+		this.id  =idCounter;
+		idCounter++;
+	}
+	
+	
+	
 	//3.konstruktori
 	public Professor()
 	{
+		setId();
 		setName("Test");
 		setSurname("Professor");
 		setDegree(ProfDegree.doctor);
@@ -60,6 +77,7 @@ public class Professor {
 	//Professor prof1 = new Professor("Karina","Skirmante", ProfDegree.master);
 	public Professor(String name, String surname, ProfDegree degree)
 	{
+		setId();
 		setName(name);
 		setSurname(surname);
 		setDegree(degree);
@@ -72,10 +90,10 @@ public class Professor {
 	}*/
 	
 	//4.toString
-	//"Karina Skirmante master"
+	//"1 Karina Skirmante master"
 	public String toString()
 	{
-		return name + " " + surname + " " + degree;
+		return id+" "+name + " " + surname + " " + degree;
 	}
 	
 	

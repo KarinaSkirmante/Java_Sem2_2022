@@ -85,7 +85,15 @@ public class Course {
 		setCreditPoints(creditPoints);
 		setProfessor(professor);
 	}
-	
+
 	//4. toString funkcija
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", title=" + title + ", creditPoints=" + 
+	creditPoints + ", professor=" + professor.toString()+ "]";
+	}
+	
+	
+	
 
 }

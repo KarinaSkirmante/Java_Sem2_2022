@@ -52,7 +52,7 @@ public class Student {
 	{
 		setId();
 		setName("Test");
-		setSurname("Professor");
+		setSurname("Student");
 	}
 	public Student(String name, String surname)
 	{

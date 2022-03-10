@@ -65,6 +65,19 @@ public class Professor {
 		setDegree(degree);
 	}
 	
+	//Professor [name=Karina, surname=Skirmante, degree=master]
+	/*@Override
+	public String toString() {
+		return "Professor [name=" + name + ", surname=" + surname + ", degree=" + degree + "]";
+	}*/
+	
+	//4.toString
+	//"Karina Skirmante master"
+	public String toString()
+	{
+		return name + " " + surname + " " + degree;
+	}
+	
 	
 	
 	

@@ -48,5 +48,25 @@ public class Student {
 	
 	
 	//3.konstruktori
+	public Student()
+	{
+		setId();
+		setName("Test");
+		setSurname("Professor");
+	}
+	public Student(String name, String surname)
+	{
+		setId();
+		setName(name);
+		setSurname(surname);
+	}
 	//4.toString funkcija
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", surname=" + surname + "]";
+	}
+	
+	
+	
+	
 }

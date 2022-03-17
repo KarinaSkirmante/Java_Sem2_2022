@@ -89,6 +89,54 @@ public class VeAForumService {
 				System.out.println(prof.getDegree());
 			}
 		}
+		
+		
+		for (Person temp : allPersons) {
+			if(temp instanceof Student)
+			{
+				Student stud = (Student)temp;
+				System.out.println(stud.getName()+" vid.atz."+ calculateAVGGrade(stud.getId()));
+			}
+		}
+		
+		for (Course temp : allCourses) {
+			System.out.println(temp.getTitle() + " vid.atz." + calculateAVGGradeInCourse(temp.getId()));
+		}
+		
 	}
+	
+	
+	private static float calculateAVGGrade(int studentId)
+	{
+		float sum = 0;
+		int gradeCounter = 0;
+		for (Grade gr : allGrades) {//gr - katra iterācija sava atzīme
+			if(gr.getStudent().getId() == studentId)
+			{
+				sum+=gr.getGradeValue();
+				gradeCounter++;
+			}
+		}
+		return sum/gradeCounter;
+	}
+	
+	//noskaidrot vidējo atzīmi konkrētā kursā
+	public static float calculateAVGGradeInCourse(int courseId)
+	{
+		float sum = 0;
+		int gradeCounter = 0;
+		for (Grade gr : allGrades) {//gr - katra iterācija sava atzīme
+			if(gr.getCourse().getId() == courseId)
+			{
+				sum+=gr.getGradeValue();
+				gradeCounter++;
+			}
+		}
+		
+		return sum/gradeCounter;
+	}
+	
+	
+	
 
 }

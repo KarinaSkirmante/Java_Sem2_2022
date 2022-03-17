@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 import models.Course;
 import models.Grade;
+import models.Person;
 import models.ProfDegree;
 import models.Professor;
 import models.Student;
 
 public class VeAForumService {
 
-	private static ArrayList<Professor> allProfessors = new ArrayList<>();
-	private static ArrayList<Student> allStudents = new ArrayList<>();
+	//private static ArrayList<Professor> allProfessors = new ArrayList<>();
+	//private static ArrayList<Student> allStudents = new ArrayList<>();
+	private static ArrayList<Person> allPersons = new ArrayList<>();
 	private static ArrayList<Course> allCourses = new ArrayList<>();
 	private static ArrayList<Grade> allGrades = new ArrayList<>();
 	
@@ -20,12 +22,12 @@ public class VeAForumService {
 		Professor prof1 = new Professor("Karina", "Šķirmante", ProfDegree.master);
 		Professor prof2 = new Professor("Estere", "Vītola", ProfDegree.master);
 		Professor prof3 = new Professor("Vairis", "Caune", ProfDegree.doctor);
-		allProfessors.add(prof1);
-		allProfessors.add(prof2);
-		allProfessors.add(prof3);
-		for (Professor temp : allProfessors) {
+		allPersons.add(prof1);
+		allPersons.add(prof2);
+		allPersons.add(prof3);
+		/*for (Professor temp : allProfessors) {
 			System.out.println(temp);
-		}
+		}*/
 		
 		
 		
@@ -36,6 +38,7 @@ public class VeAForumService {
 		allCourses.add(c1);
 		allCourses.add(c2);
 		allCourses.add(c3);
+		
 		for (Course temp : allCourses) {
 			System.out.println(temp);
 		}
@@ -43,12 +46,12 @@ public class VeAForumService {
 		Student stud1 = new Student("Jānis", "Bērziņš");
 		Student stud2 = new Student("Līga", "Jaukā");
 		Student stud3 = new Student("Baiba", "Nejaukā");
-		allStudents.add(stud1);
-		allStudents.add(stud2);
-		allStudents.add(stud3);
-		for (Student temp : allStudents) {
+		allPersons.add(stud1);
+		allPersons.add(stud2);
+		allPersons.add(stud3);
+		/*for (Student temp : allStudents) {
 			System.out.println(temp);
-		}
+		}*/
 		
 		Grade g1 = new Grade(10, stud1, c1);//10 Jānis JAVA
 		Grade g2 = new Grade(3, stud1, c2);//3 Jānis OOP
@@ -69,6 +72,23 @@ public class VeAForumService {
 			System.out.println(temp);
 		}
 		
+		allPersons.add(new Person("Pēteris", "Kalns"));
+		
+		for (Person temp : allPersons) { //prof1, prof2, prof3, stud1, stud2, stud3, pers
+			System.out.println(temp.toString());
+		}
+		System.out.println("-------------------");
+		
+		for(Person temp : allPersons)
+		{
+			
+			//tikai profesorus
+			if(temp instanceof Professor)
+			{
+				Professor prof = (Professor)temp;
+				System.out.println(prof.getDegree());
+			}
+		}
 	}
 
 }

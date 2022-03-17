@@ -151,7 +151,26 @@ public class VeAForumService {
 			return true;
 		}
 	}
+	//R - read -all
+	private static ArrayList<Course> getAllCourses()
+	{
+		return allCourses;
+	}
 	
+	//R - read by ID
+	private static Course getCourseById(int courseId)
+	{
+		if(courseId>=1000 && courseId<10000)
+		{
+			for (Course course : allCourses) {
+				if(course.getId()==courseId)
+					{
+						return course;
+					}
+				}
+			}
+		return new Course();
+	}
 	
 
 }

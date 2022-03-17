@@ -136,6 +136,21 @@ public class VeAForumService {
 		return sum/gradeCounter;
 	}
 	
+	//CRUD Course
+	//C - Create
+	private static boolean createNewCourse(String title, byte creditPoints, Professor professor)
+	{
+		Course course = new Course(title, creditPoints, professor);
+		if(allCourses.contains(course))
+		{
+			return false;
+		}
+		else
+		{
+			allCourses.add(course);
+			return true;
+		}
+	}
 	
 	
 

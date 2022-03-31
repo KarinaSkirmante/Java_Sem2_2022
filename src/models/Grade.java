@@ -1,6 +1,7 @@
 package models;
 
 public class Grade {
+// nezinu ko rakstit
 	//1.mainīgie
 	private int id;
 	private int gradeValue;

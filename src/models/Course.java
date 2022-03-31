@@ -1,5 +1,7 @@
 package models;
 
+//evas komentars
+//vel viens komentars
 public class Course {
 	//1.mainīgie
 	private int id;

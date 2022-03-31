@@ -68,7 +68,10 @@ public class Professor extends Person{//djfhdjkfydjknz,cjksdfd
 		return id+" "+super.toString() + " " + degree;
 	}
 	
-	
+	public void display()
+	{
+		System.out.println(super.toString() + id*4/2);
+	}
 	
 	
 	

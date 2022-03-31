@@ -1,5 +1,6 @@
 package models;
 
+// Viļa komentārs, lai notestētu git versiju kontroli
 public class Grade {
 	//1.mainīgie
 	private int id;

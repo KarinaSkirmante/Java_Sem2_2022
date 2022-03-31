@@ -1,7 +1,9 @@
 package models;
 
 public class Person {
-	// Comment
+	// 
+	// Removed previous comment
+	// "Another one" - dj khaled
 	//1.manīgie
 	private String name;
 	private String surname;

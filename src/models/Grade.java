@@ -63,7 +63,7 @@ public class Grade {
 			this.course = new Course();
 		}
 	}
-	
+	// Kristians Git Test 
 		
 	//3.konstruktori
 	public Grade()

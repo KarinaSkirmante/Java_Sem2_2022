@@ -70,7 +70,7 @@ public class Professor extends Person{//djfhdjkfydjknz,cjksdfd
 	
 	public void display()
 	{
-		System.out.println(super.toString());
+		System.out.println(super.toString() + id*4/2);
 	}
 	
 	

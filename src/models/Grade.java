@@ -63,7 +63,7 @@ public class Grade {
 			this.course = new Course();
 		}
 	}
-	
+	// maris was here
 		
 	//3.konstruktori
 	public Grade()

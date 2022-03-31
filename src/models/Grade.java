@@ -64,6 +64,7 @@ public class Grade {
 		}
 	}
 	// maris was here
+	//another comment
 		
 	//3.konstruktori
 	public Grade()

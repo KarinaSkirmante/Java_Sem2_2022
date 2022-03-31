@@ -1,7 +1,7 @@
 package models;
 
 //Karinas komentārs, lai notestētu git versiju kontroli
-public class Professor extends Person{
+public class Professor extends Person{//djfhdjkfydjknz,cjksdfd
 	//1. mainīgie
 	private int id;
 	private ProfDegree degree;

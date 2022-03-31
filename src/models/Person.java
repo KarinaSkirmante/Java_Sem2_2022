@@ -1,6 +1,7 @@
 package models;
 
 public class Person {
+	// Comment
 	//1.manīgie
 	private String name;
 	private String surname;
